@@ -1,0 +1,207 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bellota", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+header img {
+  width: 250px;
+}
+@media only screen and (min-width: 768px) {
+  header img {
+    width: 350px;
+  }
+}
+header h1 {
+  font-weight: bold;
+  color: #0d8187;
+}
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 40px;
+  }
+}
+header p {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+}
+main .contact__information {
+  background-color: #303030;
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  main .contact__information {
+    width: 90%;
+    height: 650px;
+    justify-content: center;
+  }
+}
+main .contact__information .fond {
+  position: absolute;
+  z-index: 0;
+  width: 500px;
+  opacity: 0.5;
+  top: -75px;
+}
+@media only screen and (min-width: 768px) {
+  main .contact__information .fond {
+    top: 90px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .contact__information .fond {
+    width: 800px;
+    top: 0px;
+  }
+}
+main .contact__information h2, main .contact__information p {
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+}
+main .contact__information span {
+  margin-right: 5px;
+}
+main .contact__information .social {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+@media only screen and (min-width: 768px) {
+  main .contact__information .social {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .contact__information .social img {
+    margin: 0 20px;
+  }
+}
+main .contact__information .circle--big {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  background-color: hsl(231, 11%, 63%);
+  opacity: 0.3;
+  bottom: -35px;
+  right: -35px;
+}
+main .contact__information .circle--small {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: hsl(231, 11%, 63%);
+  opacity: 0.5;
+  bottom: 75px;
+  right: 75px;
+}
+@media only screen and (min-width: 768px) {
+  main .contact__form {
+    width: 90%;
+  }
+}
+main .contact__form form {
+  width: 85%;
+  margin: auto;
+  color: #303030;
+}
+main .contact__form form input {
+  border: none;
+  border-bottom: 1px solid #303030;
+  width: 100%;
+  margin: 10px 0;
+}
+main .contact__form form input:focus {
+  outline: none;
+  border-bottom: 2px solid #303030;
+}
+main .contact__form form button {
+  width: 100%;
+  background-color: #0d8187;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+main .contact__form form .form--subject {
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+  margin: 10px 0;
+}
+@media only screen and (min-width: 768px) {
+  main .contact__form form .form--subject {
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+main .contact__form form .form--subject input {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .contact__form form .form--subject .form--subject--radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  main .contact__form form .form--subject .form--subject--radio {
+    margin: 0 20px;
+  }
+}
+main .contact__form form .gender {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+main .contact__form form textarea {
+  width: 100%;
+  height: 150px;
+  text-indent: 10px;
+  padding: 5px 0;
+}
+main .contact__form form #website {
+  display: none;
+}

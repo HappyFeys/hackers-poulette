@@ -1,0 +1,199 @@
+//Colors
+
+$Blue: #0d8187;
+$DarkGray : #303030;
+$Coolgray: hsl(231, 11%, 63%);
+
+@mixin responsive($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Bellota", sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(768px){
+        flex-direction: row;
+        justify-content: center;
+    }
+    img{
+        width: 250px;
+        @include responsive(768px){
+            width: 350px;
+        }
+    }
+    h1{
+        font-weight: bold;
+        color: $Blue;
+        @include responsive(768px){
+            font-size: 40px;
+        }
+    }
+    p{
+        font-size: 14px;
+        color: $Coolgray;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(768px){
+     flex-direction: row;       
+    }
+    .contact__information{
+        background-color: $DarkGray;
+        color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        @include responsive(768px){
+            width: 90%;
+            height: 650px;
+            justify-content: center;
+        }
+        .fond{
+            position: absolute;
+            z-index: 0;
+            width:500px ;
+            opacity: 0.5;
+            top: -75px;
+            @include responsive(768px){
+                top: 90px;
+            }
+            @include responsive(1024px){
+                width: 800px;
+                top: 0px;
+            }
+        }
+        h2,p{
+            padding: 10px;
+            text-align: center;
+            z-index: 1;
+        }
+        span{
+            margin-right: 5px;
+        }
+        .social{
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+            @include responsive(768px){
+                justify-content: center;
+            }
+            img{
+                @include responsive(768px){
+                    margin: 0 20px;
+                }
+            }
+        }
+        .circle--big{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            background-color: $Coolgray;
+            opacity: 0.3;
+            bottom: -35px;
+            right: -35px;
+        }
+        .circle--small{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: $Coolgray;
+            opacity: 0.5;
+            bottom: 75px;
+            right: 75px;
+        }
+    }
+    .contact__form{
+        @include responsive(768px){
+            width: 90%;
+        }
+        form{
+            width: 85%;
+            margin: auto;
+            color: $DarkGray;
+            
+            input{
+                border: none;
+                border-bottom: 1px solid $DarkGray;
+                width: 100%;
+                margin: 10px 0;
+            }
+            input:focus{
+                outline: none;
+                border-bottom: 2px solid $DarkGray;
+            }
+            button{
+                width: 100%;
+                background-color: $Blue;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+            .form--subject{
+                display: flex;
+                width: 100%;
+                font-size: 12px;
+                margin:10px 0;
+                @include responsive(768px){
+                    justify-content: center;
+                    font-size: 16px;
+                }
+                input{
+                    width: fit-content;
+                }
+                .form--subject--radio{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    @include responsive(768px){
+                        margin: 0 20px;
+                    }
+                }
+            }
+            .gender{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin:10px 0;
+            }
+            textarea{
+                width: 100%;
+                height: 150px;
+                text-indent: 10px;
+                padding: 5px 0;
+            }
+            #website{
+                display: none;
+            }
+        }
+    }
+}
