@@ -12,12 +12,12 @@
 </head>
 <body>
     <header>
+        <img src="./assets/images/hackers-poulette-logo.png" alt="logo">
         <div>
             <h1>Contact Us</h1>
             <p>Any question or remarks ?</p>
             <p>Just write us a message !</p>
         </div>
-        <img src="./assets/images/hackers-poulette-logo.png" alt="logo">
     </header>
     <main>
         <section class="contact__information">
@@ -48,28 +48,28 @@
                     </select><br>
                 </div>
                 <label for="email">Adress Email :</label><br>
-                <input type="text" id="email" name="email"><br>
+                <input type="email" id="email" name="email"><br>
                 <label for="country">Country :</label><br>
                 <input type="text" id="country" name="country"><br>
                 <label for="subject">Subject :</label><br>
                 <div class="form--subject">
                     <div class="form--subject--radio">
                         <label for="problem">Technical problems and troubleshooting</label>
-                        <input type="radio" name="problem" id="problem">
+                        <input type="radio" name="subject" id="problem" value="problem">
                     </div>
                     <div class="form--subject--radio">
                         <label for="advice">Advice and recommendations for specific projects</label>
-                        <input type="radio" name="advice" id="advice">
+                        <input type="radio" name="subject" id="advice" value="advice">
                     </div>
                     <div class="form--subject--radio">
                         <label for="suggest">Suggestion</label>
-                        <input type="radio" name="suggest" id="suggest">
+                        <input type="radio" name="subject" id="suggest" value="suggest">
                     </div>
                 </div>
                 <label for="message">Your message :</label>
                 <textarea name="message" id="message" placeholder="Your message here ..."></textarea>
                 <input type="text" id="website" name="website">
-                <button type="submit">Send your message</button>
+                <button type="submit" name="send">Send your message</button>
             </form>
         </section>
     </main>

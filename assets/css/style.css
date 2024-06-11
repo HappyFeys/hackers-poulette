@@ -7,6 +7,32 @@
 body {
   font-family: "Bellota", sans-serif;
 }
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+body .success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .success h1 {
+  background-color: #0d8187;
+  color: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 20px;
+  font-size: 32px;
+}
+body .success p {
+  color: hsl(231, 11%, 63%);
+  font-size: 16px;
+}
 
 header {
   display: flex;
@@ -15,7 +41,7 @@ header {
 }
 @media only screen and (min-width: 768px) {
   header {
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
   }
 }
@@ -74,7 +100,7 @@ main .contact__information .fond {
   position: absolute;
   z-index: 0;
   width: 500px;
-  opacity: 0.5;
+  opacity: 0.3;
   top: -75px;
 }
 @media only screen and (min-width: 768px) {
@@ -150,7 +176,7 @@ main .contact__form form input {
 }
 main .contact__form form input:focus {
   outline: none;
-  border-bottom: 2px solid #303030;
+  border-bottom: 2px solid #0d8187;
 }
 main .contact__form form button {
   width: 100%;
@@ -195,6 +221,11 @@ main .contact__form form .gender {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+}
+main .contact__form form .gender select:focus {
+  border-color: #0d8187;
+  outline: none;
+  box-shadow: 0 0 5px #0d8187;
 }
 main .contact__form form textarea {
   width: 100%;
